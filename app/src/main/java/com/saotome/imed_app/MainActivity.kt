@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         loadDrugMockList()
-
     }
 
     private fun loadDrugMockList() {
