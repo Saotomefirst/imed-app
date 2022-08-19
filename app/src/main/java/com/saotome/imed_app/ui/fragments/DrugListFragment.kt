@@ -16,7 +16,6 @@ class DrugListFragment : Fragment() {
 
     private var _binding: FragmentDrugListBinding? = null
     private val drugList = arrayListOf<Drug>()
-    // This property is only valid between onCreateView and
 
     private val adapter by lazy { DrugListAdapter() }
 
@@ -26,7 +25,7 @@ class DrugListFragment : Fragment() {
     ): View? {
 
         loadDrugMockList()
-        //do not forget to SEND THE LIST to the adapter!
+        //set loaded Drug List to adapter
         adapter.submitList(drugList)
 
         _binding = FragmentDrugListBinding.inflate(inflater, container, false)

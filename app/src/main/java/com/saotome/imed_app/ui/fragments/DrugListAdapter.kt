@@ -35,7 +35,5 @@ class DrugListAdapter : ListAdapter <Drug, DrugListAdapter.DrugViewHolder>(DiffC
 
 class DiffCallback : DiffUtil.ItemCallback<Drug> () {
     override fun areItemsTheSame(oldItem: Drug, newItem: Drug): Boolean = oldItem == newItem
-
     override fun areContentsTheSame(oldItem: Drug, newItem: Drug): Boolean = oldItem.id == newItem.id
-
 }
