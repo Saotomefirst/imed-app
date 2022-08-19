@@ -1,4 +1,4 @@
-package com.saotome.imed_app
+package com.saotome.imed_app.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

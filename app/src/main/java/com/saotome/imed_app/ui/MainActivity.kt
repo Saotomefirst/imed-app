@@ -1,4 +1,4 @@
-package com.saotome.imed_app
+package com.saotome.imed_app.ui
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,6 +9,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.saotome.imed_app.R
 import com.saotome.imed_app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
