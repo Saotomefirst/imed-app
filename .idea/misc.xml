@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/content_main.xml" value="0.2825520833333333" />
         <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/drug_item.xml" value="0.264" />
-        <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/item_drug.xml" value="0.4737609329446064" />
+        <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/fragment_first.xml" value="0.264" />
+        <entry key="..\:/Users/jorge/StudioProjects/imed-app/app/src/main/res/layout/item_drug.xml" value="0.264" />
       </map>
     </option>
   </component>

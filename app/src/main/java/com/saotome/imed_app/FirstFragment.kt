@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.saotome.imed_app.databinding.FragmentFirstBinding
+import com.saotome.imed_app.model.Drug
+import com.saotome.imed_app.ui.DrugListAdapter
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -14,27 +16,39 @@ import com.saotome.imed_app.databinding.FragmentFirstBinding
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
-
+    private val drugList = arrayListOf<Drug>()
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
+
+    private val adapter by lazy { DrugListAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
+        loadDrugMockList()
+        //do not forget to SEND THE LIST to the adapter!
+        adapter.submitList(drugList)
 
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding?.rvDrugs?.adapter = adapter
+
+        return _binding?.root
+    }
+
+    private fun loadDrugMockList() {
+        drugList.add(0, Drug(0, "Unak", "1 capsula", "20:00", "24:00"))
+        drugList.add(0, Drug(0, "Glifage", "1 capsula", "20:00", "24:00"))
+        drugList.add(0, Drug(0, "Indapen", "1 capsula", "10:00", "48:00"))
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+//        binding.buttonFirst.setOnClickListener {
+//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+//        }
     }
 
     override fun onDestroyView() {
