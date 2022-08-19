@@ -5,20 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.saotome.imed_app.databinding.FragmentFirstBinding
+import com.saotome.imed_app.databinding.FragmentDrugListBinding
 import com.saotome.imed_app.model.Drug
 import com.saotome.imed_app.ui.DrugListAdapter
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class DrugListFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: FragmentDrugListBinding? = null
     private val drugList = arrayListOf<Drug>()
     // This property is only valid between onCreateView and
-    // onDestroyView.
 
     private val adapter by lazy { DrugListAdapter() }
 
@@ -31,7 +29,7 @@ class FirstFragment : Fragment() {
         //do not forget to SEND THE LIST to the adapter!
         adapter.submitList(drugList)
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentDrugListBinding.inflate(inflater, container, false)
         _binding?.rvDrugs?.adapter = adapter
 
         return _binding?.root
