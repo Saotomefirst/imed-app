@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.saotome.imed_app.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:name="com.saotome.imed_app.ui.fragments.DrugListFragment"
+        android:label="@string/drug_list_fragment_label"
+        tools:layout="@layout/fragment_drug_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.saotome.imed_app.SecondFragment"
+        android:name="com.saotome.imed_app.ui.fragments.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
