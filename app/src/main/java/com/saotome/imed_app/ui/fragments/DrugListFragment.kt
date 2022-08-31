@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.saotome.imed_app.R
 import com.saotome.imed_app.databinding.FragmentDrugListBinding
 import com.saotome.imed_app.model.Drug
 import com.saotome.imed_app.ui.DrugListAdapter
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
+
 class DrugListFragment : Fragment() {
 
     private var _binding: FragmentDrugListBinding? = null
@@ -43,9 +43,9 @@ class DrugListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.buttonFirst.setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
+        _binding?.fabNewDrug?.setOnClickListener {
+            findNavController().navigate(R.id.action_DrugList_to_EditDrug)
+        }
     }
 
     override fun onDestroyView() {
