@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_edit_drug">
 
         <action
-            android:id="@+id/action_EditDrug_cancel"
+            android:id="@+id/action_EditDrug_Cancel"
             app:destination="@id/DrugList" />
     </fragment>
 </navigation>
