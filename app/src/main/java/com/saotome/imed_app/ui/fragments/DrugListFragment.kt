@@ -24,15 +24,16 @@ class DrugListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        initData()
-
+        drugListViewModel = ViewModelProvider(this).get(DrugListViewModel::class.java)
         _binding = FragmentDrugListBinding.inflate(inflater, container, false)
         _binding?.rvDrugs?.adapter = adapter
+
+        initData()
+
         return _binding?.root
     }
 
     private fun initData() {
-        drugListViewModel = ViewModelProvider(this).get(DrugListViewModel::class.java)
         adapter.submitList(drugListViewModel.getDrugList())
     }
 
